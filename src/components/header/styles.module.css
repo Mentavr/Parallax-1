@@ -5,8 +5,8 @@
 }
 
 .layerHeader {
-    z-index: 10;
-    transform: rotateX(calc(var(--move-y))) rotateY(calc(var(--move-x))) translateZ(2000px) scale(0.6);
+    z-index: 2;
+    transform: rotateX(calc(var(--move-y))) rotateY(calc(var(--move-x))) translateZ(200px) scale(0.6);
 }
 
 .layers {
@@ -31,14 +31,18 @@
 }
 
 .layerBase {
+    z-index: 1;
     transform: translate3d(0, calc(var(--scrollTop) / 1.3), 0) rotateX(calc(var(--move-y))) rotateY(calc(var(--move-x))) translateZ(-55px);
 }
 
 .layerMiddle {
-    transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0) rotateX(calc(var(--move-y))) rotateY(calc(var(--move-x))) translateZ(580px);
+    z-index: 3;
+    transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0) rotateX(calc(var(--move-y))) rotateY(calc(var(--move-x))) translateZ(280px);
+    top: 2px
 }
 
 .layerFront {
+    z-index: 4;
     transform: translate3d(0, calc(var(--scrollTop) / 7), 0) rotateX(calc(var(--move-y))) rotateY(calc(var(--move-x))) translateZ(780px);
 }
 

@@ -10,7 +10,7 @@ export const Header = () => {
   Object.assign(document.documentElement, {
     style: `
     --scrollTop: ${y}px;
-    --move-x:${(xIntersecting - window.innerWidth / 2) * -.002}deg;
+    --move-x:${(xIntersecting - window.innerWidth / 2) * -.005}deg;
     --move-y:${(yIntersecting - window.innerHeight / 2) * -.002}deg;
     `,
   });
