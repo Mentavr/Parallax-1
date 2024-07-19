@@ -1,0 +1,55 @@
+.mainHeader {
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.layerHeader {
+    z-index: 10;
+    transform: rotateX(calc(var(--move-y))) rotateY(calc(var(--move-x))) translateZ(2000px) scale(0.6);
+}
+
+.layers {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.layer {
+    /* height: 100%;
+    width: 100%; */
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    inset: -5vw;
+
+}
+
+.layerBase {
+    transform: translate3d(0, calc(var(--scrollTop) / 1.3), 0) rotateX(calc(var(--move-y))) rotateY(calc(var(--move-x))) translateZ(-55px);
+}
+
+.layerMiddle {
+    transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0) rotateX(calc(var(--move-y))) rotateY(calc(var(--move-x))) translateZ(580px);
+}
+
+.layerFront {
+    transform: translate3d(0, calc(var(--scrollTop) / 7), 0) rotateX(calc(var(--move-y))) rotateY(calc(var(--move-x))) translateZ(780px);
+}
+
+.layersCapture {
+    /* font-size: calc(100px - calc(var(--scrollTop) / 5));
+    transform: translate3d(0, calc(var(--scrollTop) / 5), calc(var(--scrollTop))); */
+    font-size: 70px;
+}
+
+.layerTitle {
+    /* font-size: calc(50px - calc(var(--scrollTop) / 10));
+    transform: translate3d(0, calc(var(--scrollTop) / 5), calc(var(--scrollTop))); */
+    font-size: 40px;
+}
